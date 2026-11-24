@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DENZZ CLIENT">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="62" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#190d29"/>
+      <stop offset="1" stop-color="#07050b"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="18" y1="16" x2="48" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d8b4fe"/>
+      <stop offset=".5" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#6b21a8"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="17" fill="url(#bg)" stroke="#a855f7" stroke-opacity=".48" stroke-width="1.5"/>
+  <rect x="7" y="7" width="50" height="50" rx="12" fill="none" stroke="#ffffff" stroke-opacity=".06"/>
+  <g filter="url(#glow)">
+    <path fill-rule="evenodd" d="M20 18h13.5a14 14 0 0 1 0 28H20V18Zm7.5 7v14h6a7 7 0 0 0 0-14h-6Z" fill="url(#purple)"/>
+    <path d="M47.5 29.5H53M45.5 36.5H51" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" opacity=".85"/>
+    <circle cx="53.5" cy="29.5" r="1.7" fill="#d8b4fe"/>
+    <circle cx="51.5" cy="36.5" r="1.5" fill="#a855f7"/>
+  </g>
+  <path d="M10 52h12" stroke="#a855f7" stroke-width="1.4" stroke-linecap="round" opacity=".5"/>
+  <circle cx="10.5" cy="52" r="1.6" fill="#a855f7"/>
+</svg>

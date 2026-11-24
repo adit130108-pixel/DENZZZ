@@ -1,0 +1,6 @@
+{
+  "name": "FIXA ONLY WIRE VIP",
+  "description": "FIXA ONLY WIRE VIP — Subscription & VIP Dashboard Control Panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

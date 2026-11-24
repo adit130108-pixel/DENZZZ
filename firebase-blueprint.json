@@ -1,0 +1,66 @@
+{
+  "entities": {
+    "SiteStatus": {
+      "title": "SiteStatus",
+      "description": "Global online/offline availability state and maintenance message for DENZZ CLIENT.",
+      "type": "object",
+      "properties": {
+        "online": {
+          "type": "boolean",
+          "description": "Whether the main website is currently online and accessible to visitors."
+        },
+        "message": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 240,
+          "description": "Maintenance message displayed when the website is offline."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of the last status update."
+        },
+        "updatedBy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "description": "Verified email of the admin who updated the status."
+        }
+      },
+      "required": ["online", "message", "updatedAt", "updatedBy"]
+    },
+    "AdminUser": {
+      "title": "AdminUser",
+      "description": "Authorized administrator record keyed by Firebase Auth UID.",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 128,
+          "description": "Verified Google email address of the admin."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the admin record was created."
+        }
+      },
+      "required": ["email", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/siteStatus/{statusId}": {
+      "schema": {
+        "$ref": "#/entities/SiteStatus"
+      },
+      "description": "Stores the global website online/offline status document (document ID: current)."
+    },
+    "/admins/{adminUid}": {
+      "schema": {
+        "$ref": "#/entities/AdminUser"
+      },
+      "description": "Stores authorized administrator accounts keyed by UID."
+    }
+  }
+}
